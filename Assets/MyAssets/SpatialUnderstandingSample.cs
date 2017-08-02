@@ -5,9 +5,8 @@ using System;
 using HoloToolkit.Unity;
 using HoloToolkit.Unity.SpatialMapping;
 
-public class SpatialUnderstandingSample : MonoBehaviour {
-
-
+public class SpatialUnderstandingSample : MonoBehaviour
+{
     public GameObject toPlaceObj;
     // Consts
     public float kMinAreaForStats = 5.0f;
@@ -49,12 +48,14 @@ public class SpatialUnderstandingSample : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
         print(SpatialUnderstanding.Instance.ScanState.ToString());
 
@@ -74,11 +75,12 @@ public class SpatialUnderstandingSample : MonoBehaviour {
         }
     }
 
-    void CreateScene() {
+    void CreateScene()
+    {
 
         // DLLの初期化
         SpatialUnderstandingDllObjectPlacement.Solver_Init();
- 
+
         var halfBoxDims = boxFullDims * .5f;
         // 他のオブジェクトから離す距離
         var disctanceFromOtherObjects = halfBoxDims.x > halfBoxDims.z ? halfBoxDims.x * 3f : halfBoxDims.z * 3f;
