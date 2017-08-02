@@ -16,7 +16,7 @@ public class SpatialUnderstandingSample : MonoBehaviour {
     public float kMinWallAreaForComplete = 10.0f;
 
     private bool _triggered = false;
-    private Vector3 boxFullDims = new Vector3(.05f, .05f, .05f);
+    private Vector3 boxFullDims = new Vector3(1f, 1f, 1f);
 
     public bool DoesScanMeetMinBarForCompletion
     {
